@@ -1,0 +1,43 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la pantalla */
+  background-color: rgb(49, 48, 47);
+  background-image: url("https://www.superprof.es/blog/wp-content/uploads/2020/07/aprender-mecanografia-informatica.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.LoginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(221, 221, 221, 0.527);
+  backdrop-filter: blur(1.5px);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.BotonLogin {
+  margin-top: 20px;
+}
+
+.BotonLogout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.UserInfo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.UserImage {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}

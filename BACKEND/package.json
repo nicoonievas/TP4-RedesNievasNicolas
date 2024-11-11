@@ -1,0 +1,25 @@
+{
+  "name": "intercarreras2024-back-new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "atlas": "^1.0.0-alpha.0",
+    "axios": "^1.7.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "markdown-it": "^14.1.0",
+    "mongodb": "^6.10.0",
+    "mqtt": "^5.10.1",
+    "pdfkit": "^0.15.1",
+    "pdfkit-markdown": "^0.2.0",
+    "react-markdown": "^9.0.1",
+    "websocket": "^1.0.35"
+  }
+}
