@@ -265,14 +265,14 @@ app.get('/api/informePDF/:informeId', async (req, res) => {
 
 
 app.get('/api/alumnos', async (req, res) => {
-    const { email, page = 1, perPage = 10 } = req.query; // Extrae `email`, `page`, y `perPage`
+    const { email, page = 1, perPage = 10 } = req.query; 
 
     try {
         const db = await connectDB();
         const collection = db.collection('alumnos');
 
-        // Construir el filtro para la consulta, si `email` está presente
-        const query = email ? { usuario: email } : {}; // Filtrar por el campo `instituto`, que se asume que es el email del usuario
+ 
+        const query = email ? { usuario: email } : {}; 
 
         // Obtener los alumnos con el filtro por email
         const alumnos = await collection
@@ -290,16 +290,16 @@ app.get('/api/alumnos', async (req, res) => {
 
 
 app.get('/api/informes', async (req, res) => {
-    const { email, page = 1, perPage = 10 } = req.query; // Extrae `email`, `page` y `perPage` desde los query params
+    const { email, page = 1, perPage = 10 } = req.query; 
 
     try {
         const db = await connectDB();
         const collection = db.collection('informes');
 
-        // Construir el filtro para la consulta, si `email` está presente
-        const query = email ? { usuario: email } : {}; // Si el email está presente, se filtra por usuario
+      
+        const query = email ? { usuario: email } : {};
 
-        // Obtener los informes con el filtro por email
+    
         const informes = await collection
             .find(query) // Filtro de email
             .skip((page - 1) * perPage) // Paginación
