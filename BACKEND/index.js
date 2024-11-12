@@ -14,7 +14,7 @@ const pdfkitMarkdown = require('pdfkit-markdown');
 // Instancia de markdown-it
 const md = new markdownIt();
 
-
+require('dotenv').config();
 
 const app = express();
 
@@ -69,7 +69,7 @@ con las características: Responsabilidad: ${caracteristica1}, Trabajo grupal: $
                     'Content-Type': 'application/json'
                 },
                 params: {
-                    key: 'AIzaSyC11SKeekuqaBF25y-A8ZTw7jbIaOeucD4'
+                    key: process.env.GEMINI_API_KEY
                 }
             }
         );

@@ -1,11 +1,11 @@
 // db.js
 const { MongoClient } = require('mongodb');
-
+require('dotenv').config();
 
 
 // URL de conexión a MongoDB Atlas
-const uri = 'mongodb+srv://nicolasnievas1:Nicolas182@mongodb.vypil5v.mongodb.net/';
 
+const uri = process.env.MONGODB_URI;
 let db;
 
 const connectDB = async () => {
